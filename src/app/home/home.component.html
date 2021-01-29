@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content > 
+    <card>
+        <div class="content">
+            <div class="text" id="giro">
+                <img src="assets/img/info.svg" alt=""
+                >
+            </div>
+            <div class="circle" (click)="Girar()" >
+                <img src="assets/img/circle.svg" alt="">
+            </div>
+        </div>
+    </card>
+</ion-content>
+
+<!-- Footer without a border -->
+<ion-footer  >
+<card>
+    <div class="wrapper">
+         <div class="imgFoot">
+             <img src="assets/img/gilead.svg">
+         </div>
+         <span>
+                 GILEAD, y el logo de GILEAD son marcas registradas de Gilead Sciences, Inc. o sus campañías <br>
+                 relacionadas ©2020 Gilead Science, Inc. Todos los derechos reservados
+        </span>
+         <div class="imgFoot">
+             <img src="assets/img/gador.svg" >
+         </div>
+    </div>          
+ </card>
+</ion-footer>
+ 
+ 
+ 

@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  border-radius: 0;
+  font-weight: lighter; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+p {
+  font-family: "Didact Gothic", sans-serif; }
+
+body {
+  overflow-x: hidden;
+  position: relative; }
+  body:before {
+    transition: all 0.4s ease;
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 8;
+    background: rgba(255, 255, 255, 0);
+    visibility: hidden;
+    opacity: 0; }
+  body.active:before {
+    background: rgba(255, 255, 255, 0.6);
+    visibility: visible;
+    opacity: 1; }
+
+.hamburger {
+  position: absolute;
+  right: 20px;
+  z-index: 99;
+  transition: all 0.4s ease;
+  z-index: 9; }
+  .hamburger.active {
+    right: 360px;
+    transition: all 0.4s ease; }
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+  background-color: #fabf00 !important; }
+
+section {
+  position: relative;
+  width: 100%; }
+  section .wrapper {
+    min-height: calc(100vh - 120px);
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    position: relative; }
+  section.home .wrapper {
+    background-image: url("../img/bg-home.jpg");
+    background-size: cover;
+    background-position: center left;
+    display: table;
+    text-align: center; }
+    section.home .wrapper .content {
+      display: table-cell;
+      vertical-align: middle; }
+      section.home .wrapper .content .circle {
+        width: 37%;
+        display: inline-block;
+        vertical-align: middle; }
+        section.home .wrapper .content .circle img {
+          max-width: 100%; }
+      section.home .wrapper .content .nav {
+        display: inline-block;
+        vertical-align: middle;
+        list-style-type: none;
+        margin-left: 20px; }
+        section.home .wrapper .content .nav li {
+          margin-bottom: 10px; }
+          section.home .wrapper .content .nav li a {
+            display: block;
+            padding: 10px;
+            background: #EC7703;
+            font-family: "Didact Gothic", sans-serif;
+            font-size: 25px;
+            color: #fff;
+            font-weight: lighter;
+            letter-spacing: 1px;
+            transition: all 0.2s ease; }
+            section.home .wrapper .content .nav li a:hover {
+              background: #d76f08; }
+  section.calculo .wrapper {
+    text-align: center;
+    display: table; }
+    section.calculo .wrapper .content {
+      display: table-cell;
+      vertical-align: middle; }
+      section.calculo .wrapper .content .opciones-peso {
+        list-style-type: none;
+        display: inline-block;
+        vertical-align: middle;
+        border: 1px solid #EC7703;
+        padding: 0px;
+        display: none; }
+        section.calculo .wrapper .content .opciones-peso li {
+          font-family: "Didact Gothic", sans-serif;
+          text-align: center;
+          display: block;
+          border-top: 1px solid #EC7703; }
+          section.calculo .wrapper .content .opciones-peso li:first-child {
+            background: #EC7703;
+            color: #fff;
+            padding: 11px 40px;
+            font-size: 17px;
+            letter-spacing: 1px; }
+          section.calculo .wrapper .content .opciones-peso li a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: #6F7072;
+            font-size: 18px; }
+            section.calculo .wrapper .content .opciones-peso li a.active {
+              background: rgba(236, 119, 3, 0.2); }
+      section.calculo .wrapper .content .info {
+        position: relative;
+        width: calc(70% - 240px);
+        /* width: 500px */
+        /* height: 500px */
+        transform: scale(1);
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 36%;
+        overflow: hidden; }
+        section.calculo .wrapper .content .info .text {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0px;
+          right: 0px;
+          top: 0%;
+          bottom: 0px;
+          margin: auto;
+          background-size: cover;
+          transition: all 0.5s ease;
+          transform: rotate(360deg); }
+          section.calculo .wrapper .content .info .text img {
+            width: 100%;
+            height: 100%;
+            position: relative; }
+        section.calculo .wrapper .content .info .circle {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0px;
+          right: 0px;
+          top: 0%;
+          bottom: 0px;
+          margin: auto;
+          background-size: cover;
+          transition: all 0.5s ease; }
+          section.calculo .wrapper .content .info .circle img {
+            width: 100%;
+            height: 100%;
+            position: relative; }
+      section.calculo .wrapper .content.version2 .info {
+        width: 100%;
+        height: 700px;
+        padding: 0px !important; }
+      section.calculo .wrapper .content.version2 .content-op {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        overflow: auto;
+        background: #ec7702;
+        width: 340px;
+        right: -340px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.4s ease;
+        z-index: 9; }
+        section.calculo .wrapper .content.version2 .content-op.active {
+          right: 0px;
+          visibility: visible;
+          opacity: 1; }
+        section.calculo .wrapper .content.version2 .content-op .opciones-peso {
+          display: block;
+          border: 0px;
+          width: 100%; }
+          section.calculo .wrapper .content.version2 .content-op .opciones-peso li:first-child {
+            background: #31302b;
+            color: #fff;
+            padding: 25px 40px;
+            font-size: 17px;
+            letter-spacing: 1px;
+            position: relative;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold; }
+            section.calculo .wrapper .content.version2 .content-op .opciones-peso li:first-child:after {
+              content: "";
+              width: 100%;
+              height: 5px;
+              position: absolute;
+              top: -4px;
+              left: 0px;
+              background: #31302b; }
+          section.calculo .wrapper .content.version2 .content-op .opciones-peso li a {
+            color: #fff;
+            border-top: 1px solid #ecaf02;
+            padding: 20px 10px; }
+            section.calculo .wrapper .content.version2 .content-op .opciones-peso li a.active {
+              background: #ec8e02; }
+
+footer {
+  display: table;
+  width: 100%;
+  height: 120px;
+  background: #fff;
+  padding: 40px; }
+  footer .wrap {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0px; }
+    footer .wrap .info {
+      display: inline-block;
+      vertical-align: middle;
+      width: 50%;
+      font-size: 12px;
+      text-align: left; }
+      footer .wrap .info img {
+        max-height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 200px;
+        width: 20%; }
+      footer .wrap .info p {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px; }
+      footer .wrap .info:last-child {
+        text-align: right; }
+
+@media (max-width: 1300px) {
+  section.calculo .wrapper .content.version2 .info {
+    width: 100%;
+    height: 600px; } }
+@media (max-width: 1000px) {
+  .wrapper .info {
+    width: 100%;
+    padding-bottom: 100%; } }
+@media (max-width: 700px) {
+  section.home .wrapper .content .circle {
+    width: 67%; }
+  section.home .wrapper .content .nav {
+    margin-top: 10px; }
+    section.home .wrapper .content .nav li a {
+      font-size: 20px; }
+  section.calculo .wrapper .info {
+    width: 100%;
+    padding-bottom: 100%; }
+
+  footer {
+    padding: 20px; }
+    footer .wrap .info {
+      width: 100%;
+      text-align: left !important;
+      margin: 5px 0px; }
+      footer .wrap .info p {
+        font-size: 13px;
+        margin-top: 5px; } }
+@media (max-width: 500px) {
+  .hamburger.active {
+    right: calc(100% - 58px); }
+
+  section.calculo .wrapper .content.version2 .content-op {
+    width: calc(100% - 58px);
+    right: calc(-100% - 58px); } }
+
+/*# sourceMappingURL=main.css.map */

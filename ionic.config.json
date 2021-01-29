@@ -1,0 +1,7 @@
+{
+  "name": "ambisome",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
